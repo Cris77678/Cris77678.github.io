@@ -1,0 +1,158 @@
+body {
+  width: 100%; /* Ajustar el cuerpo al ancho del viewport */
+  height: auto; /* Altura automática para adaptarse al contenido */
+  margin: 0; /* Eliminar el margen predeterminado del cuerpo */
+  padding: 0; /* Eliminar el relleno predeterminado del cuerpo */
+  background: skyblue; /* Fondo con un degradado lineal */
+}
+
+/*MENU*/
+/* Estilos para el menú desplegable */
+/* Estilos para los contenedores de h2 y párrafos */
+.container {
+    background-color: #f2f2f2; /* Color de fondo gris claro */
+    border-radius: 10px; /* Agregar bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    margin-bottom: 20px; /* Añadir espacio inferior entre contenedores */
+    background-color: rgba(255, 255, 255, 0.5); /* Color de fondo transparente con opacidad */
+    backdrop-filter: blur(10px); /* Aplicar un filtro de desenfoque al fondo */
+    z-index: 999; /* Asegurarse de que los contenedores estén detrás del menú */
+}
+.container, .titulo {
+    /* Otros estilos */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Borde sombreado */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.titulo {
+    border-radius: 10px; /* Agregar bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    margin-bottom: 20px; /* Añadir espacio inferior entre contenedores */ 
+    background-color: rgba(255, 255, 255, 0.5); /* Color de fondo transparente con opacidad */
+    backdrop-filter: blur(10px); /* Aplicar un filtro de desenfoque al fondo */
+}
+
+
+.menu {
+    position: fixed; /* El menú se fija en una posición fija en la pantalla */
+     left: -250px; /* Inicialmente, el menú está fuera de la pantalla hacia la izquierda */
+    background-color: rgba(255, 255, 255, 0.5); /* Color de fondo transparente con opacidad */
+    backdrop-filter: blur(10px); /* Aplicar un filtro de desenfoque al fondo */
+    padding: 20px; /* Espaciado interno del menú */
+    height: 300px;
+    width: 200px; /* Ancho del menú */
+    transition: left 0.8s; /* Agregamos una transición suave para el despliegue */
+    z-index: 1000; /* Ajustar el índice Z para que el menú esté por encima de otros elementos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Sombra suave */
+    border-radius: 10px;
+
+}
+
+.menu.active {
+    top: 60px; /* Despliega el menú desde arriba hacia abajo */
+}
+
+
+.menu.active {
+    left: 0; /* Cuando la clase "active" está presente, el menú se desplaza hacia la derecha y se muestra */
+}
+
+.menu ul {
+    list-style-type: none; /* Quitamos los estilos de lista */
+    padding: 0; /* Eliminamos el relleno de la lista */
+    margin: 0; /* Eliminamos los márgenes de la lista */
+}
+
+.menu li {
+    margin-bottom: 10px; /* Añadimos espacio entre los elementos de la lista */
+}
+
+.menu a {
+    display: block; /* Hacemos que los enlaces ocupen todo el ancho del menú */
+    color: black; /* Color del texto */
+    text-decoration: none; /* Quitamos el subrayado de los enlaces */
+    padding: 10px; /* Espaciado interno de los enlaces */
+    font-family: 'Roboto', sans-serif; /* Modifica la fuente del texto del menú */
+}
+
+.menu a:hover {
+    background-color: skyblue; /* Cambiamos el color de fondo al pasar el cursor sobre los enlaces */
+}
+
+/* Estilos para el icono de hamburguesa */
+.menu-icon {
+    position: fixed; /* El icono de hamburguesa se posiciona de forma absoluta dentro del menú */
+    top: 18px; /* Posicionamos el icono 20px desde la parte superior */
+    left: 20px; /* Posicionamos el icono 20px desde la izquierda */
+    cursor: pointer; /* Cambiamos el cursor al pasar sobre el icono para indicar que es interactivo */
+    z-index: 999; /* Aseguramos que el icono esté sobre otros elementos */
+    transition: transform 0.8s ease-in-out; /* Transición suave */
+}
+
+.menu.active .menu-icon {
+    transform: rotate(90deg); /* Rotación del icono */
+}
+.bar {
+    width: 30px; /* Ancho de las barras del icono de hamburguesa */
+    height: 5px; /* Altura de las barras del icono de hamburguesa */
+    background-color: black; /* Color de las barras del icono de hamburguesa */
+    margin: 5px 0; /* Espacio entre las barras del icono de hamburguesa */
+    c
+}
+
+/* Ocultar el menú hasta que se active */
+.menu {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.menu.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+/*MENU */
+
+/* Estilos para las imágenes */
+img {
+    max-width: 100%; /* Asegurarse de que las imágenes no excedan el ancho del contenedor */
+    height: 250px; /* Mantener la proporción de aspecto */
+    border-radius: 10px; /* Agregar bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agregar una sombra suave */
+    transition: transform 0.3s ease-in-out; /* Agregar una transición suave en el hover */
+    display: block; /* Convertir la imagen en un bloque para centrarla fácilmente */
+    margin: 0 auto; /* Centrar la imagen horizontalmente */
+    border: solid black 2px;
+}
+
+img:hover {
+    transform: scale(1.05); /* Aumentar ligeramente el tamaño de la imagen al pasar el cursor */
+}
+
+/* Estilos para los párrafos */
+p {
+    font-size: 16px; /* Aumentar el tamaño del texto */
+    line-height: 1.6; /* Aumentar el espaciado entre líneas */
+    margin-bottom: 20px; /* Añadir espacio inferior entre párrafos */
+    margin: 45px; /* Separación exterior */
+    font-family: 'Roboto', sans-serif; /* Fuente Roboto */
+    color: black; /* Color de texto negro */
+}
+
+/* Estilos para los encabezados */
+h1 {
+    font-family: 'Roboto', sans-serif; /* Fuente Roboto */
+    font-weight: bold; /* Hacer el texto más grueso */
+    color: black; /* Color de texto negro */
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); /* Agregar una sombra suave al texto */
+    margin-bottom: 5px; /* Añadir espacio inferior entre encabezados y el contenido siguiente */
+    text-align: center; /* Alinear texto al centro */
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif; /* Fuente Roboto */
+    font-weight: bold; /* Hacer el texto más grueso */
+    color: black; /* Color de texto negro */
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); /* Agregar una sombra suave al texto */
+    margin: 45px; /* Separación exterior */
+    margin-bottom: 10px; /* Añadir espacio inferior entre encabezados y el contenido siguiente */ 
+}

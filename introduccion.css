@@ -1,0 +1,83 @@
+body {
+    height: 100vh; /* 100% del alto de la ventana */
+    display: flex; /* Usa el modelo de caja flexible */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    flex-direction: column; /* Apila los elementos verticalmente */
+}
+
+/* Estilo para el contenedor del encabezado */
+.header-container {
+    text-align: center; /* Alinea el contenido al centro */
+    padding: 20px; /* Espacio interno */
+    background-color: black; /* Color de fondo */
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Sombra */
+    border: 2px solid seagreen; /* Borde sólido */
+    margin-bottom: 20px; /* Margen inferior para separar del siguiente elemento */
+    width: 80%; /* Ancho del contenedor del encabezado */
+    max-width: 800px; /* Ancho máximo del contenedor del encabezado */
+    color: springgreen; /* Color del texto */
+}
+
+/* Estilos específicos para el encabezado h1 dentro del contenedor del encabezado */
+.header-container h1 {
+    margin: 0; /* Elimina el margen predeterminado */
+    font-size: 48px; /* Tamaño de la fuente */
+    color: springgreen; /* Color del texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra del texto */
+    font-family: 'Retro Mono', monospace; /* Fuente */
+    padding: 5px 10px; /* Espacio interno */
+    border-radius: 10px; /* Bordes redondeados */
+    text-decoration: none; /* Quita el subrayado */
+    transition: transform 0.2s ease-in-out, color 0.5s ease; /* Transiciones */  
+}
+
+/* Estilos al pasar el ratón por encima del encabezado h1 dentro del contenedor del encabezado */
+.header-container h1:hover {
+    transform: translateY(-2px) scale(1.1); /* Desplaza y aumenta el tamaño */
+    color: hsl(140, 100%, 75%); /* Cambia el color del texto */
+}
+
+
+/* Estilos generales para todos los encabezados h2 */
+h2 {
+    color: #333; /* Color del texto para todos los encabezados h2 */
+    font-size: 24px; /* Tamaño de fuente para todos los encabezados h2 */
+    margin-top: 30px; /* Margen superior para todos los encabezados h2 */
+}
+
+/* Estilos específicos para el encabezado h2 con id="Introduccion" */
+#Introduccion {
+    font-weight: bold; /* Hace que el texto del encabezado h2 con id="Introduccion" sea negrita */
+}
+
+/* Estilos generales para los párrafos */
+p {
+    color: #666; /* Color del texto para todos los párrafos */
+    font-size: 16px; /* Tamaño de fuente para todos los párrafos */
+    line-height: 1.6; /* Altura de línea para todos los párrafos */
+    margin-bottom: 20px; /* Margen inferior para todos los párrafos */
+}
+
+/* Estilos generales para las imágenes */
+img {
+    max-width: 100%; /* Ancho máximo de las imágenes al 100% del contenedor padre */
+    height: auto; /* Altura automática para mantener la proporción */
+    display: block; /* Hace que las imágenes sean elementos de bloque */
+    margin: 0 auto; /* Centra las imágenes horizontalmente */
+    margin-bottom: 20px; /* Margen inferior para todas las imágenes */
+    border-radius: 8px; /* Bordes redondeados para todas las imágenes */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para todas las imágenes */
+}
+
+/* Estilo para los enlaces */
+a {
+    color: #4CAF50; /* Color del texto para todos los enlaces */
+    text-decoration: none; /* Quita el subrayado predeterminado de los enlaces */
+}
+
+/* Estilos al pasar el ratón por encima de los enlaces */
+a:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón por encima de los enlaces */
+}

@@ -1,0 +1,85 @@
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: skyblue;
+    border: 4px skyblue;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: black;
+}
+
+h1 {
+    font-size: 48px;
+    font-family: '04b_03', monospace;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    font-family: 'Rock Salt', cursive;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+h3{
+    font-family: "Rock Salt", cursive; /* Puedes cambiar "Arial" por la fuente que desees */
+    text-align: center;
+    color: White;
+}
+p{
+    font-family: "Rock Salt", cursive; /* Puedes cambiar "Arial" por la fuente que desees */
+    text-align: center;
+    color: black;
+}
+body {
+	 /* Establecer la imagen de fondo */
+    background-image: url('azul.png');
+    /* Ajustar la imagen al tamaño del cuerpo */
+    background-size: cover;
+    /* Centrar la imagen en el cuerpo */
+    background-position: center;
+    /* Fijar la imagen para que no se desplace con el contenido */
+    background-attachment: fixed;
+}
+/* Estilo para la imagen */
+.imagen-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    width: 300px; /* Ancho deseado */
+    height: 200px; /* Altura deseada */
+    margin-right: 20px; /* Espacio entre las imágenes */
+    margin-bottom: 20px; /* Espacio entre las imágenes */
+}
+
+.imagen-container img {
+    display: block;
+    width: 100%; /* Hacer que la imagen ocupe todo el ancho del contenedor */
+    height: 100%; /* Hacer que la imagen ocupe todo el alto del contenedor */
+    object-fit: cover; /* Escalar la imagen para que se ajuste dentro del contenedor manteniendo su relación de aspecto */
+    transition: filter 0.3s ease; /* Transición suave para el filtro */
+    border-top: 2px solid whitesmoke;
+    border-right: 2px dashed whitesmoke;
+    border-bottom: 2px dotted whitesmoke;
+    border-left: 2px double whitesmoke;
+}
+
+.imagen-container:hover img {
+    filter: brightness(50%); /* Oscurecer la imagen al colocar el mouse sobre ella */
+}
+
+.texto-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.imagen-container:hover .texto-overlay {
+    opacity: 1;
+}
